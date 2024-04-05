@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>M.ZACOM</title>
+	<!-- Favicon -->
+	<link rel="shortcut icon" type="image/icon" href="assets/images/vvvv.png" />
+	<!-- Font Awesome -->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+	<!-- Bootstrap -->
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Slick slider -->
+	<link href="assets/css/slick.css" rel="stylesheet">
+	<!-- Theme coalor -->
+	<link id="switcher" href="assets/css/theme-color/dark-red-theme.css" rel="stylesheet">
+	<!-- php -->
+	<!-- <link rel="stylesheet" href="ali.php"> -->
+
+	<!-- ----linked media.css file---- -->
+	<link rel="stylesheet" href="b2.html" />
+
+	<!-- Main Style -->
+	<link href="style.css" rel="stylesheet">
+
+	<!-- <link href="mailer.php" rel="stylesheet"> -->
+	<link rel="stylesheet" type="text/css" href="">
+	<!-- Fonts -->
+	
+
+
+
+
+	<!-- Open Sans for body and title font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800" rel="stylesheet">
+
+
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+	<script>
+		// Array of predefined credentials (username and password)
+		var credentials = [
+			{ username: "nas/csc/20/1149", password: "1234" },
+			{ username: "nas/csc/20/1201", password: "1234" },
+			{ username: "nas/csc/20/1221", password: "1234" },
+			{ username: "nas/csc/20/1001", password: "1234" },
+			{ username: "nas/csc/20/1029", password: "1234" },
+			{ username: "nas/csc/20/1037", password: "1234" },
+			{ username: "nas/csc/20/1142", password: "1234" }
+		
+		
+		];
+
+		function login(event) {
+			// Get the values entered in the username and password fields
+			var username = document.getElementById("username").value;
+			var password = document.getElementById("password").value;
+
+			// Loop through the credentials array to check for a match
+			for (var i = 0; i < credentials.length; i++) {
+				// Check if the entered username and password match any credentials in the array
+				if (credentials[i].username === username && credentials[i].password === password) {
+					// Redirect to another page (replace "b2.html" with your desired page)
+
+					alert(" user login successful! THIS PAGE IS UNDER MENTAINANCE" );
+
+					 window.location.href = "index.html";
+
+					// Exit the function after successful login
+					return ;
+					event.preventDefault();
+				}
+			}
+			// If no match is found, display an error message
+			alert("Invalid username or password!");
+			
+		}
+	</script>
+
+</head>
+
+<body>
+
+	<!-- <script type="text/javascript" src="javs.js"></script>
+  	 -->
+	<!-- Start Header -->
+	<header id="mu-header" class="" role="banner">
+		<div class="mu-header-overlay">
+			<div class="container">
+				<div class="mu-header-area">
+					<!-- Start Logo -->
+					<div class="mu-logo-area">
+						<!-- text based logo -->
+						<a class="mu-logo" href="#">ALQALAM UNIVERSITY</a>
+						<!-- image based logo -->
+						<!-- <a class="mu-logo" href="#"><img src="assets/images/logo.png" alt="logo img"></a> -->
+					</div>
+					<!-- End Logo -->
+
+					<!-- Start header featured area -->
+					<div class="mu-header-featured-area">
+						<div class="mu-header-featured-img">
+							<img src="assets/images/Untitled-3.png" alt="iphone image">
+						</div>
+
+						<div class="mu-header-featured-content">
+							<h1>Welcome To <span>AUK </span>Students Hostel</h1>
+							<p>List of Available Hostels - Al-Qalam University Katsina
+								<style>a{color: wheat;}</style>
+								<a href="https://staff.auk.edu.ng">pages  list_hostel
+								List of Available Hostels ; 1, Kano House Hostel, KanoHouse ; 2, ULULALBAB, 
+								ALBAB ; 3, SIR USMAN NAGOGG FEMALE HOSTEL (SPECIAL), SH ; 4, SANI ZANGON DAURA FEMALE ...
+								!</p></a>
+
+							<div class="mu-app-download-area">
+
+								<div class="auk">
+									<img src="assets/images/IMG_8385.PNG" alt="">
+
+								</div>
+
+							</div>
+
+
+							<!-- <a class="mu-windows-btn" href="#"><i class="fa fa-windows"></i><span>windows store</span></a> -->
+							<!-- action="welcome.php" method="post" -->
+
+							<form id="loginForm">
+
+								<label for=" signupPassword">Matric Number:</label>
+								<input type="text" required id="username">
+
+								<label for="signupPassword">Password:</label>
+								<input type="password" required id="password">
+
+								<!-- <label for="email">Email</label>
+									<input type="email" name="email" required> -->
+
+								<!-- <input type="submit" class="submit-btn" onclick="b2()"></button> <br> -->
+								<!--<a href="VNV.html">loging</a>-->
+								<button type="submit" onclick="login(event)">login</button>
+								<button type="submit" onclick="Team(event)">Team-work</button>
+								<button type="submit" onclick="mybutton(event)">review</button>
+
+							</form>
+							<script>
+								function mybutton() {
+									window.location.href = 'index.html';
+								}
+							</script>
+
+
+							<form id="signupForm" style="display: none; ">
+								<label for="aname">Username:</label>
+
+								<input type="text" name="name" required>
+								<label for="signupPassword">Matric Number:</label>
+
+								<input type="password" required>
+
+								<label for="signupPassword">Password:</label>
+								<input type="password" required>
+
+								<label for="email">Email</label>
+								<input type="email" name="email" required>
+								<button type="button" onclick="signup()">team-work</button>
+
+
+							</form>
+
+							<div id="homePage" style="display: none;">
+								<h1>Welcome! To Computer Sceince Department Team </h1>
+								<img src="assets/images/download-bg.jpeg" alt="">
+								<p>
+									<style>h3{color: black,gainsboro};</style>
+								<h3>QUOTES: Code Never Lies, Comments Sometimes Do, Imagination Is
+									More Important Than Knowledge.</h3>
+								</p>
+
+								<!-- form -->
+
+
+								<script>
+									function Team() {
+										// Implement actual login logic here (e.g., send request to server)
+										// For simplicity, just toggle the visibility of the forms and home page
+										document.getElementById("loginForm").style.display = "none";
+										document.getElementById("signupForm").style.display = "none";
+										document.getElementById("homePage").style.display = "block";
+									}
+
+									function signup() {
+										// Implement actual signup logic here (e.g., send request to server)
+										// For simplicity, just toggle the visibility of the forms and home page
+										document.getElementById("loginForm").style.display = "none";
+										document.getElementById("signupForm").style.display = "none";
+										document.getElementById("homePage").style.display = "block";
+									}
+
+									function logout() {
+										// Implement actual logout logic here (e.g., clear session)
+										// For simplicity, just toggle the visibility of the forms and home page
+										document.getElementById("loginForm").style.display = "block";
+										document.getElementById("signupForm").style.display = "none";
+										document.getElementById("homePage").style.display = "none";
+
+
+									}
+								</script>
+								
+								<!-- ====markup about section==== -->
+								<section id="about" class="about">
+									<div class="about-desc">
+										<h2>Veiw-info</h2>
+										<h3>H.O.D</h3>
+										<section id="about">
+											<div>
+												<p>
+													What are the responsibilities of Hod in school?
+													The prime role of the Head of the Department is to provide strong
+													academic
+													leadership. The Head of Department is required to lead, manage and
+													develop the
+													department to ensure it achieves the highest possible standards of
+													excellence in all its activities.</p>
+												<div id="more" style="display: none;">
+													<h3>E.O</h3>
+													<p>Examinations officers play a pivotal role in schools and colleges
+														in the administration, management and conducting of
+														examinations. Exams office staff
+														support teaching colleagues and students. This role is sometimes
+														known as exam manager, exam officer or exam administrator.</p>
+
+													<h3>LVL.CO</h3>
+													<p>The role of the Level Coordinator (Freshman or Senior Levels)
+														includes ensuring that
+														all faculty responsibilities related to a course are fulfilled.
+														This includes adherence
+														to syllabi, course objectives,
+														delivery of course content, maintenance of student rosters and
+														records, and timely submission of grades.</p>
+
+													<h3>Developer</h3>
+													<p>Halluru Abubakar (Namcos pres)</p>
+													<p>Zubairu Muhammad Abubakar (programmer)</p>
+													<p>Muhammad Muhammad (bagudu)</p>
+													<p>Jafar Isah Ibrahim</p>
+
+													<p>Join our team to be one of our team member.</p>
+												</div>
+												<button id="read-more-btn" class="btn">Read More...</button>
+											</div>
+										</section>
+
+										<script>
+											document.getElementById('read-more-btn').addEventListener('click', function () {
+												var moreText = document.getElementById('more');
+												if (moreText.style.display === 'none') {
+													moreText.style.display = 'block';
+													document.getElementById('read-more-btn').textContent = 'Read Less';
+												} else {
+													moreText.style.display = 'none';
+													document.getElementById('read-more-btn').textContent = 'Read More';
+												}
+											});
+
+
+										</script>
+
+										<button type="button" onclick="logout()">logout</button>
+
+
+									</div>
+							</div>
+
+							<!-- End header featured area -->
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<button type="button" onclick="log()">logform</button>
+			<!-- <div id="kt" style="display: none;">
+			<div class="settingmenu"> -->
+			<div class="settingmenuinner">
+				<div class="nav-right">
+					<div class="contai">
+
+						<div class="forml" id="nt" style="display: none;">
+
+							<form action="welcome.php" method="post">
+								<span class=" title">
+									<h4>form</h4>
+								</span>
+								<h5>sign up below to be the member of
+									Hostel, A.U.k! read the following terms!</h5>
+								<div class="input-field">
+									<input type="name" placeholder=" Name*" required>
+									<i class="uil uil-envelope icon"></i>
+								</div>
+
+								<div class="input-field">
+									<input type="email" placeholder="ENTER YOUR EMAIL*" required>
+									<i class="uil uil-envelope icon"></i>
+								</div>
+								<div class="input-field">
+									<input type="tel" phone number="first 234" placeholder="PHONE*" required>
+									<i class="uil uil-envelope icon"></i>
+								</div>
+								<div class="input-field">
+									<input type="text"  placeholder="MATRIC NUMBER*" required>
+									<i class="uil uil-envelope icon"></i>
+								</div>
+								<div class="input-field">
+									<input type="password" class="password" placeholder="enter your password" required>
+									<i class="uil uil-padlock icon"></i>
+									<i class="uil uil-eye-slash showHidePw"></i>
+								</div>
+
+								<div class="checkbox-text">
+									<div class="checkbox-content">
+										<input type="checkbox" id="logcheck">
+										<label for="logcheck" class="text">PAID?</label>
+									</div>
+									<a href="#">Forgot password?</a>
+								</div>
+
+								<div class="input-field button">
+									<input type="button" value="login now">
+								</div>
+
+
+
+								<h6>By providing your phone number,you are consenting to receive calls and<br>
+									SMS/MMs msgs,including outodialed and automated calls and texts,to that<br>
+									number from save M.ZACOM apply Now & you are to pay 500 only </h6>
+
+
+								<h4>Transfer Details</h4>
+								<h5>Acc:2193084885</h5>
+
+								
+							</form>
+							<br>
+							<br>
+							<br>
+							<br>
+							<p><button type="button" onclick="logout()">logout</button></p>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		</div>
+
+		<script>
+			function log() {
+				// Implement actual login logic here (e.g., send request to server)
+				// For simplicity, just toggle the visibility of the forms and home page
+				document.getElementById("loginForm").style.display = "none";
+				document.getElementById("signupForm").style.display = "none";
+				document.getElementById("nt").style.display = "block";
+			}
+
+			function signup() {
+				// Implement actual signup logic here (e.g., send request to server)
+				// For simplicity, just toggle the visibility of the forms and home page
+				document.getElementById("loginForm").style.display = "none";
+				document.getElementById("signupForm").style.display = "none";
+				document.getElementById("nt").style.display = "block";
+			}
+
+			function logout() {
+				// Implement actual logout logic here (e.g., clear session)
+				// For simplicity, just toggle the visibility of the forms and home page
+				document.getElementById("loginForm").style.display = "block";
+				document.getElementById("nt").style.display = "none";
+				document.getElementById("homePage").style.display = "none";
+
+
+			}
+		</script>
+
+
+	</header>
+
+
+</body>
+
+</html>
